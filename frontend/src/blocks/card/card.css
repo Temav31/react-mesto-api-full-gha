@@ -1,0 +1,15 @@
+.card {
+    background-color: white;
+    border-radius: 10px;
+    height: 361px;
+    width: 282px;
+    margin: auto;
+    position: relative;
+    z-index: 1;
+}
+
+@media (min-width: 1080px) {
+    .card {
+        margin: 0;
+    }
+}

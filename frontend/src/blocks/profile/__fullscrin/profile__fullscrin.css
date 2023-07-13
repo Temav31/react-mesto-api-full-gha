@@ -1,0 +1,13 @@
+.profile__fullscrin {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+@media (min-width: 1080px) {
+    .profile__fullscrin {
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+    }
+}

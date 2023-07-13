@@ -1,0 +1,23 @@
+.group {
+    /* margin: auto; */
+    display: grid;
+    grid-template-rows: repeat(5, auto);
+    row-gap: 20px;
+}
+
+@media (min-width: 768px) {
+    .group {
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(3, auto);
+        gap: 17px;
+        margin: 0;
+    }
+}
+
+@media (min-width: 1080px) {
+    .group {
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: repeat(2, auto);
+        row-gap: 20px;
+    }
+}

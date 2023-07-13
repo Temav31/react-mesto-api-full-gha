@@ -1,0 +1,15 @@
+.popup__container_type_delete {
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+    width: 282px;
+    height: 181px;
+    margin: 0 auto;
+}
+
+@media (min-width: 1080px) {
+    .popup__container_type_delete {
+        width: 430px;
+        height: 181px;
+    }
+}

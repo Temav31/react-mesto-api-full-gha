@@ -1,0 +1,16 @@
+.profile__info-author {
+    margin-top: 26px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+}
+@media (min-width: 1080px) {
+    .profile__info-author {
+        min-height: 39px;
+        margin-top: 0;
+        margin-bottom: 10px;
+        align-items: center;
+        justify-content: center;
+    }
+}

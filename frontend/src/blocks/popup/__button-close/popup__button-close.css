@@ -1,0 +1,14 @@
+.popup__button-close {
+    background-color: transparent;
+    width: 20px;
+    height: 20px;
+}
+@media (min-width: 1080px) {
+    .popup__button-close {
+        width: 32px;
+        height: 32px;
+    }
+}
+.popup__button-close:hover {
+    opacity: 0.8;
+}

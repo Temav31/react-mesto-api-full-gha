@@ -1,0 +1,29 @@
+.profile__button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    padding: 0;
+}
+.profile__button::before {
+    content: '';
+    border-radius: 120px;
+    height: 120px;
+    width: 120px;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+    background-color: #2A2C2F;
+    opacity: 0;
+    /* transition: opacity 350ms ease; */
+}
+.profile__button:hover::before {
+    opacity: 0.8;
+    background-image: url(../../../image/EditProfile.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+}

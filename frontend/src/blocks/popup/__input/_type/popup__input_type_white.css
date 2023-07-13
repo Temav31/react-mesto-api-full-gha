@@ -1,0 +1,11 @@
+.popup__input_type_white{
+    color: white;
+    background-color: black;
+    border-bottom: 2px solid #CCCCCC;
+    padding-top: 30px;
+    padding-bottom: 8px;
+
+}
+.popup__input_type_white:last-child {
+    padding-top: 50px;
+}

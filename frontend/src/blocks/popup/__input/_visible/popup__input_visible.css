@@ -1,0 +1,5 @@
+.popup__input_visible {
+    display: block;
+    box-sizing: border-box;
+    min-height: 30px;
+}

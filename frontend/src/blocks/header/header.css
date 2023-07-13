@@ -1,0 +1,13 @@
+.header {
+    border-bottom: 1px solid #545454;
+    height: 55px;
+}
+@media (min-width: 1080px) {
+    .header {
+        /* width: 880px; */
+        min-height: 73px;
+        display: flex;
+        justify-content: space-between;
+        /* align-items: center; */
+    }
+}

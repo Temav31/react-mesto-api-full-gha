@@ -1,0 +1,13 @@
+.entrance__link {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: #ffffff;
+    padding-left: 6px;
+    margin: 15px 0 0;
+    cursor: pointer;
+}
+
+.entrance__link:hover {
+    opacity: 0.6;
+}

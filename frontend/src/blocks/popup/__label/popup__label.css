@@ -1,0 +1,13 @@
+.popup__label {
+    height: 44px;
+}
+
+@media (min-width: 1080px) {
+    .popup__label {
+        margin-bottom: 15px;
+    }
+}
+
+.popup__label:last-child {
+    margin-bottom: 0;
+}
