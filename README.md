@@ -9,8 +9,8 @@
 
 ## Ссылки на проект
 
-IP-адрес x.x.x.x
+IP-адрес 158.160.58.211
 
-Frontend https://...
+Frontend https://work.tema.nomoredomains.work
 
-Backend https://...
+Backend https://api.work.tema.nomoredomains.work
