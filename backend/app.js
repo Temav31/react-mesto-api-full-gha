@@ -2,9 +2,9 @@ const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
-const { requestLogger, errorLogger } = require('./middlewares/logger');
 const router = require('./routes/index');
 const errorHandler = require('./middlwares/error');
+const { requestLogger, errorLogger } = require('./middlwares/logger');
 // константы
 const app = express();
 app.use(express.json());
