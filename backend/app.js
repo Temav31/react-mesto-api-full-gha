@@ -14,7 +14,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 });
 // роуты
 app.use(cookieParser());
-app.use('/api', router);
+app.use(router);
 app.use(errors());
 app.use(errorHandler);
 // порт
