@@ -4,10 +4,10 @@ module.exports.options = {
     'http://work.tema.nomoredomains.work/',
     'https://api.work.tema.nomoredomains.work/',
     'http://api.work.tema.nomoredomains.work/',
-    'https://localhost:3001/',
-    'http://localhost:3001/',
-    'https://localhost:3000/',
-    'http://localhost:3000/',
+    // 'https://localhost:3001/',
+    // 'http://localhost:3001/',
+    // 'https://localhost:3000/',
+    // 'http://localhost:3000/',
   ],
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS', // настраивает заголовок CORS Access-Control-Allow-Methods.
   preflightContinue: false, // передать предварительный ответ CORS следующему обработчику.
