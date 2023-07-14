@@ -1,5 +1,5 @@
 import React from "react";
-import { Routes, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 // функциональный компонент
 function Register({ isRegister }) {
     // const [] = React.useState({ email: "", password: "" });
