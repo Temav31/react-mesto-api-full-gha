@@ -4,6 +4,7 @@ const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
+const helmet = require('helmet');
 const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
 
@@ -16,6 +17,7 @@ const corsError = require('./middlwares/cors');
 // константы
 const app = express();
 app.use('*', cors(corsError));
+app.use(helmet());
 app.use(express.json());
 // app.use(cors());
 const { PORT = 3000 } = process.env;
