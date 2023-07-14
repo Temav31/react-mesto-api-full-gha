@@ -110,6 +110,6 @@ class Api {
 // класс апи
 // const api = new Api('https://mesto.nomoreparties.co/v1/cohort-62', '1a6e0a32-00a7-4ba0-818b-d0147d70095f');
 // const api = new Api('http://localhost:3000');
-const api = new Api('http://api.work.tema.nomoredomains.work');
+const api = new Api('https://api.work.tema.nomoredomains.work');
 // экспортирем класс
 export default api;
