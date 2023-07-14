@@ -2,6 +2,8 @@ module.exports.options = {
   origin: [ // Массив доменов, с которых разрешены кросс-доменные запросы.
     'https://work.tema.nomoredomains.work',
     'http://work.tema.nomoredomains.work',
+    'https://api.work.tema.nomoredomains.work',
+    'http://api.work.tema.nomoredomains.work',
     'https://localhost:3001',
     'http://localhost:3001',
     'https://localhost:3000',
