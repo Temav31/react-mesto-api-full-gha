@@ -15,12 +15,7 @@ const { requestLogger, errorLogger } = require('./middlwares/logger');
 const corsError = require('./middlwares/cors');
 // константы
 const app = express();
-app.use(cors({
-  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
-  origin: [ // Массив доменов, с которых разрешены кросс-доменные запросы.
-    '*',
-  ],
-}));
+app.use(cors());
 app.use(express.json());
 const { PORT = 3000 } = process.env;
 // // подключаемся к серверу mongo
@@ -31,7 +26,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 app.use(cookieParser());
 // логигер запросов
 app.use(requestLogger);
-app.use(corsError);
+// app.use(corsError);
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
