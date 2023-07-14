@@ -141,12 +141,14 @@ function App() {
 	}
 	// авторизация 
 	function handleLogin(dataLog) {
+		console.log(dataLog);
 		auth.authorization(dataLog)
 			.then((data) => {
 				if (data.token) {
 					localStorage.setItem("token", data.token);
 					setАuthoriz(true);
-					navigate("/mesto");
+					// navigate("/mesto");
+					navigate("/");
 				}
 			})
 			.catch((err) => {
@@ -173,12 +175,15 @@ function App() {
 	// приверка
 	React.useEffect(() => {
 		const token = localStorage.getItem("token");
+		console.log(token);
 		if (token) {
 			auth.check(token)
 				.then((data) => {
 					setАuthoriz(true);
-					setEmail(data.data.email);
-					navigate("/react-mesto-auth", { replace: true });
+					// setEmail(data.data.email);
+					setEmail(data.email);
+					// navigate("/react-mesto-auth", { replace: true });
+					navigate("/", { replace: true });
 				})
 				.catch((err) => {
 					console.log(err)
@@ -204,7 +209,8 @@ function App() {
 					/>
 					<Route
 						path="*"
-						element={authoriz ? <Navigate to="/react-mesto-auth" /> : <Navigate to="/sign-in" />}
+						// element={authoriz ? <Navigate to="/react-mesto-auth" /> : <Navigate to="/sign-in" />}
+						element={authoriz ? <Navigate to="/" /> : <Navigate to="/sign-in" />}
 					/>
 					<Route
 						path="/react-mesto-auth"
