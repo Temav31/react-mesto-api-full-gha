@@ -1,9 +1,14 @@
+const fs = require('fs');
+const https = require('https');
 const express = require('express');
 require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const { errors } = require('celebrate');
 const cookieParser = require('cookie-parser');
+
+const privateKey = fs.readFileSync('/etc/letsencrypt/live/work.tema.nomoredomains.work/privkey.pem', 'utf8');
+const certificate = fs.readFileSync('/etc/letsencrypt/live/work.tema.nomoredomains.work/fullchain.pem', 'utf8');
 const router = require('./routes/index');
 const errorHandler = require('./middlwares/error');
 const { requestLogger, errorLogger } = require('./middlwares/logger');
@@ -33,6 +38,9 @@ app.use(errorLogger);
 app.use(errors());
 app.use(errorHandler);
 // порт
-app.listen(PORT, () => {
-  console.log(`Порт: ${PORT}`);
-});
+// app.listen(PORT, () => {
+//   console.log(`Порт: ${PORT}`);
+// });
+const httpsServer = https.createServer({ key: privateKey, cert: certificate }, app);
+
+httpsServer.listen(PORT);
