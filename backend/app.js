@@ -15,7 +15,8 @@ const { requestLogger, errorLogger } = require('./middlwares/logger');
 const corsError = require('./middlwares/cors');
 // константы
 const app = express();
-app.use(cors());
+app.use('*', cors(corsError));
+// app.use(cors());
 app.use(express.json());
 const { PORT = 3000 } = process.env;
 // // подключаемся к серверу mongo
