@@ -6,14 +6,14 @@ const DataError = require('../utils/errors/DataError');
 const ServerError = require('../utils/errors/ServerError');
 // получение карточекreqgweg
 module.exports.getCard = (req, res, next) => {
-  console.log('запрос карточек');
+  // console.log('запрос карточек');
   Card.find({})
     .then((cards) => res.status(200).send(cards))
     .catch(() => next(new ServerError()));
 };
 // создать карточку
 module.exports.createCard = (req, res, next) => {
-  console.log('новая карточка');
+  // console.log('новая карточка');
   const owner = req.user._id;
   const { name, link } = req.body;
   // создание карточки и определяет кто пользователь

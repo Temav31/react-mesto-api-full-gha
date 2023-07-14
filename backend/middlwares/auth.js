@@ -14,7 +14,6 @@ module.exports = (req, res, next) => {
   // извлекаем токен
   const token = authorization.replace('Bearer ', '');
   let payload;
-
   try {
     // верифицируем токен
     payload = jwt.verify(token, NODE_ENV === 'production' ? JWT_SECRET : 'dev-secret');

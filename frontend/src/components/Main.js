@@ -6,7 +6,6 @@ import avatarImageAdd from '../image/add.svg';
 import Card from './Card';
 // импорт компонента
 import { CurrentUserContext } from '../contexts/CurrentUserContext.js';
-console.log('hi');
 function Main({ onEditAvatar, onEditProfile, onAddPlace, onCardClick, onCardLike, onCardDelete, cards }) {
     const currentUserContext = React.useContext(CurrentUserContext);
     const { name, about, avatar } = currentUserContext;

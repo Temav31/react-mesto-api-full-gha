@@ -74,7 +74,7 @@ function App() {
 			});
 	}
 	function handleCardDelete(id) {
-		console.log(id)
+		// console.log(id)
 		api.removeCard(id)
 			.then(() => {
 				setCards((cards) => cards.filter((c) => c._id !== id));
@@ -85,7 +85,7 @@ function App() {
 	}
 	// функции для редактирования данных
 	function handleUpdateUser(newData) {
-		console.log(newData);
+		// console.log(newData);
 		api.setUserInfo(newData)
 			.then((data) => {
 				setCurrentUser(data);
@@ -96,7 +96,7 @@ function App() {
 			})
 	}
 	function handleUpdateAvatar(data) {
-		console.log(data);
+		// console.log(data);
 		api.setUserAvatar(data)
 			.then((data) => {
 				setCurrentUser(data);
@@ -121,7 +121,7 @@ function App() {
 		if (!authoriz) return;
 		api.getProfile()
 			.then((data) => {
-				console.log(data);
+				// console.log(data);
 				setCurrentUser(data);
 			})
 			.catch((err) => {
@@ -129,7 +129,7 @@ function App() {
 			});
 		api.getCardList()
 			.then((data) => {
-				console.log(data);
+				// console.log(data);
 				setCards(data);
 			})
 			.catch((err) => {
@@ -145,7 +145,7 @@ function App() {
 	}
 	// авторизация 
 	function handleLogin(dataLog) {
-		console.log(dataLog);
+		// console.log(dataLog);
 		auth.authorization(dataLog)
 			.then((data) => {
 				if (data.token) {
@@ -179,7 +179,7 @@ function App() {
 	// приверка
 	React.useEffect(() => {
 		const token = localStorage.getItem("token");
-		console.log(token);
+		// console.log(token);
 		if (token) {
 			auth.check(token)
 				.then((data) => {
@@ -190,7 +190,7 @@ function App() {
 					navigate("/", { replace: true });
 				})
 				.catch((err) => {
-					console.log(err)
+					console.log(err);
 				});
 		}
 	}, [navigate]);

@@ -10,7 +10,7 @@ const ServerError = require('../utils/errors/ServerError');
 const { NODE_ENV, JWT_SECRET } = process.env;
 // регистрация
 module.exports.createUser = (req, res, next) => {
-  console.log('hi');
+  // console.log('hi');
   const {
     name,
     about,
@@ -30,15 +30,15 @@ module.exports.createUser = (req, res, next) => {
         password: hashedPassword,
       })
         .then(() => {
-          console.log('новый пользователь');
-          console.log({
-            data: {
-              name,
-              about,
-              avatar,
-              email,
-            },
-          });
+          // console.log('новый пользователь');
+          // console.log({
+          //   data: {
+          //     name,
+          //     about,
+          //     avatar,
+          //     email,
+          //   },
+          // });
           res.send({
             data: {
               name,
@@ -62,7 +62,7 @@ module.exports.createUser = (req, res, next) => {
 };
 // аутентификация
 module.exports.login = (req, res, next) => {
-  console.log('hi');
+  // console.log('hi');
   const { email, password } = req.body;
   return User.findUserByCredentials(email, password)
     .then((user) => {
@@ -80,7 +80,7 @@ module.exports.login = (req, res, next) => {
       //   secure: false,
       //   sameSite: 'Lax',
       // });
-      console.log('вход');
+      // console.log('вход');
       return res.send({ token });
       // .send({
       //   name: user.name,
@@ -137,7 +137,7 @@ module.exports.getCurrentUser = (req, res, next) => {
 // обновление аватара
 module.exports.UpdateAvatar = (req, res, next) => {
   const { avatar } = req.body;
-  console.log(avatar);
+  // console.log(avatar);
   User.findByIdAndUpdate(
     req.user._id,
     { avatar },
@@ -161,7 +161,7 @@ module.exports.UpdateAvatar = (req, res, next) => {
 };
 // обновление профиля
 module.exports.UpdateProfile = (req, res, next) => {
-  console.log('hi');
+  // console.log('hi');
   const { name, about } = req.body;
   User.findByIdAndUpdate(
     req.user._id,

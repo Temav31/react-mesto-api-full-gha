@@ -16,7 +16,7 @@ class ApiAuth {
 		return Promise.reject(`Ошибка: ${res.status}`);
 	}
 	authorization(body) {
-		console.log(body);
+		// console.log(body);
 		return fetch(`${this._url}/signin`, {
 			method: "POST",
 			headers: this._getHeaders(),
@@ -25,7 +25,7 @@ class ApiAuth {
 			.then((res) => this._getJson(res));
 	}
 	registration(body) {
-		console.log(body);
+		// console.log(body);
 		return fetch(`${this._url}/signup`, {
 			method: "POST",
 			headers: this._getHeaders(),

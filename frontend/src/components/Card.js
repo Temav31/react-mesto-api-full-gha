@@ -21,14 +21,13 @@ function Card({ card, onCardClick, onCardLike, onCardDelete }) {
         onCardClick(card);
     }
     function handleClickLike() {
-		console.log('hi');
+		// console.log('hi');
         onCardLike(card);
     }
     function handleClickDelete() {
         onCardDelete(card._id);
         // console.log(card._id);
     }
-    // console.log(card);
     return (
         <div className="card">
             {isOwn && <button className=" card__trash" onClick={handleClickDelete}>
