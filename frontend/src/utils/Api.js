@@ -19,6 +19,7 @@ class Api {
 	getProfile() {
 		const token = localStorage.getItem("token");
 		const p = fetch(`${this._basePath}/users/me`, {
+			credentials: 'include',
 			headers: {
 				"content-type": "application/json",
 				authorization: `Bearer ${token}`,

@@ -1,7 +1,7 @@
+require('dotenv').config();
 const fs = require('fs');
 const https = require('https');
 const express = require('express');
-require('dotenv').config();
 const mongoose = require('mongoose');
 const cors = require('cors');
 const helmet = require('helmet');
@@ -13,13 +13,13 @@ const certificate = fs.readFileSync('/etc/letsencrypt/live/work.tema.nomoredomai
 const router = require('./routes/index');
 const errorHandler = require('./middlwares/error');
 const { requestLogger, errorLogger } = require('./middlwares/logger');
-const corsError = require('./middlwares/cors');
+// const corsError = require('./middlwares/cors');
 // константы
 const app = express();
-app.use('*', cors(corsError));
+// app.use('*', cors(corsError));
+app.use(cors());
 app.use(helmet());
 app.use(express.json());
-// app.use(cors());
 const { PORT = 3000 } = process.env;
 // // подключаемся к серверу mongo
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {

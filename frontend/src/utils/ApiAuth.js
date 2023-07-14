@@ -19,6 +19,7 @@ class ApiAuth {
 		// console.log(body);
 		return fetch(`${this._url}/signin`, {
 			method: "POST",
+			credentials: 'include',
 			headers: this._getHeaders(),
 			body: JSON.stringify(body)
 		})
@@ -28,6 +29,7 @@ class ApiAuth {
 		// console.log(body);
 		return fetch(`${this._url}/signup`, {
 			method: "POST",
+			credentials: 'include',
 			headers: this._getHeaders(),
 			body: JSON.stringify(body)
 		})
@@ -36,6 +38,7 @@ class ApiAuth {
 	check(token) {
 		return fetch(`${this._url}/users/me`, {
 			method: "GET",
+			credentials: 'include',
 			headers: {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json',
