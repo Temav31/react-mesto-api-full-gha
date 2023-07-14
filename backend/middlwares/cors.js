@@ -1,7 +1,7 @@
 module.exports.options = {
   origin: [ // Массив доменов, с которых разрешены кросс-доменные запросы.
-    'https://domainname.nataly.nomoredomains.sbs',
-    'http://domainname.nataly.nomoredomains.sbs',
+    'https://work.tema.nomoredomains.work',
+    'http://work.tema.nomoredomains.work',
     'https://localhost:3001',
     'http://localhost:3001',
     'https://localhost:3000',

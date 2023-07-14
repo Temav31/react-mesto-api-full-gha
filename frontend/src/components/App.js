@@ -62,7 +62,8 @@ function App() {
 	// функции для карточки
 	function handleCardLike(card) {
 		// Снова проверяем, есть ли уже лайк на этой карточке
-		const isLiked = card.likes.some(i => i._id === currentUser._id);
+		// const isLiked = card.likes.some(i => i._id === currentUser._id);
+		const isLiked = card.likes.some(i => i === currentUser._id);
 		// Отправляем запрос в API и получаем обновлённые данные карточки
 		api.сhangeLikeCard(card._id, !isLiked)
 			.then((newCard) => {
@@ -95,6 +96,7 @@ function App() {
 			})
 	}
 	function handleUpdateAvatar(data) {
+		console.log(data);
 		api.setUserAvatar(data)
 			.then((data) => {
 				setCurrentUser(data);
@@ -119,6 +121,7 @@ function App() {
 		if (!authoriz) return;
 		api.getProfile()
 			.then((data) => {
+				console.log(data);
 				setCurrentUser(data);
 			})
 			.catch((err) => {
@@ -126,6 +129,7 @@ function App() {
 			});
 		api.getCardList()
 			.then((data) => {
+				console.log(data);
 				setCards(data);
 			})
 			.catch((err) => {
@@ -213,7 +217,8 @@ function App() {
 						element={authoriz ? <Navigate to="/" /> : <Navigate to="/sign-in" />}
 					/>
 					<Route
-						path="/react-mesto-auth"
+						// path="/react-mesto-auth"
+						path="/"
 						element={
 							<ProtectedRoute
 								isLogin={authoriz}

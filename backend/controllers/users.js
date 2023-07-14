@@ -136,8 +136,8 @@ module.exports.getCurrentUser = (req, res, next) => {
 };
 // обновление аватара
 module.exports.UpdateAvatar = (req, res, next) => {
-  console.log('hi');
   const { avatar } = req.body;
+  console.log(avatar);
   User.findByIdAndUpdate(
     req.user._id,
     { avatar },
@@ -145,7 +145,7 @@ module.exports.UpdateAvatar = (req, res, next) => {
   )
     .orFail(new Error('Not Found'))
     .then((user) => {
-      res.send({ data: user });
+      res.send(user);
     })
     .catch((err) => {
       if (err.name === 'CastError') {

@@ -18,7 +18,7 @@ class Api {
 		return Promise.reject(`Ошибка: ${res.status}`);
 	}
 	getProfile() {
-		const token = localStorage.getItem("jwt");
+		const token = localStorage.getItem("token");
 		const p = fetch(`${this._basePath}/users/me`, {
 			headers: {
 				"content-type": "application/json",
@@ -28,7 +28,7 @@ class Api {
 		return p.then(this._getJson);
 	};
 	setUserInfo(item) {
-		const token = localStorage.getItem("jwt");
+		const token = localStorage.getItem("token");
 		return fetch(`${this._basePath}/users/me`, {
 			method: "PATCH",
 			headers: {
@@ -40,7 +40,7 @@ class Api {
 			.then(this._getJson);
 	}
 	setUserAvatar(item) {
-		const token = localStorage.getItem("jwt");
+		const token = localStorage.getItem("token");
 		return fetch(`${this._basePath}/users/me/avatar`, {
 			method: "PATCH",
 			headers: {
@@ -52,7 +52,7 @@ class Api {
 			.then(this._getJson);
 	}
 	getCardList() {
-		const token = localStorage.getItem("jwt");
+		const token = localStorage.getItem("token");
 		const c = fetch(`${this._basePath}/cards`, {
 			headers: {
 				"content-type": "application/json",
@@ -62,7 +62,7 @@ class Api {
 		return c.then(this._getJson);
 	};
 	addCard(item) {
-		const token = localStorage.getItem("jwt");
+		const token = localStorage.getItem("token");
 		return fetch(`${this._basePath}/cards`, {
 			method: "POST",
 			headers: {
@@ -74,7 +74,7 @@ class Api {
 			.then(this._getJson);
 	}
 	removeCard(id) {
-		const token = localStorage.getItem("jwt");
+		const token = localStorage.getItem("token");
 		return fetch(`${this._basePath}/cards/${id}`, {
 			method: "DELETE",
 			headers: {
@@ -85,7 +85,7 @@ class Api {
 			.then(this._getJson);
 	}
 	сhangeLikeCard(id, isLiked) {
-		const token = localStorage.getItem("jwt");
+		const token = localStorage.getItem("token");
 		if (isLiked) {
 			return fetch(`${this._basePath}/cards/${id}/likes`, {
 				method: "PUT",
