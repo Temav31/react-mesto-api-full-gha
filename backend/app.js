@@ -12,7 +12,7 @@ const certificate = fs.readFileSync('/etc/letsencrypt/live/work.tema.nomoredomai
 const router = require('./routes/index');
 const errorHandler = require('./middlwares/error');
 const { requestLogger, errorLogger } = require('./middlwares/logger');
-// const corsError = require('./middlwares/cors');
+const corsError = require('./middlwares/cors');
 // константы
 const app = express();
 app.use(cors({
@@ -31,7 +31,7 @@ mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
 app.use(cookieParser());
 // логигер запросов
 app.use(requestLogger);
-// app.use('*', cors(corsError));
+app.use(corsError);
 app.get('/crash-test', () => {
   setTimeout(() => {
     throw new Error('Сервер сейчас упадёт');
