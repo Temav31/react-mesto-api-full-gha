@@ -17,8 +17,6 @@ app.use(cors({
   origin: [
     'https://work.tema.nomoredomains.work',
     'http://work.tema.nomoredomains.work',
-    'https://api.work.tema.nomoredomains.work',
-    'http://api.work.tema.nomoredomains.work',
   ],
 }));
 const { PORT = 3000 } = process.env;
