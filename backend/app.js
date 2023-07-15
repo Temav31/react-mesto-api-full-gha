@@ -19,10 +19,6 @@ app.use(cors({
     'http://work.tema.nomoredomains.work',
     'https://api.work.tema.nomoredomains.work',
     'http://api.work.tema.nomoredomains.work',
-    'https://localhost:3001',
-    'http://localhost:3001',
-    'https://localhost:3000',
-    'http://localhost:3000',
   ],
 }));
 const { PORT = 3000 } = process.env;
