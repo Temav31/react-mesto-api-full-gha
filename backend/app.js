@@ -16,7 +16,7 @@ app.use(cors({
   credentials: true,
   origin: [
     'https://work.tema.nomoredomains.work',
-    'http://work.tema.nomoredomains.work',
+    // 'http://work.tema.nomoredomains.work',
   ],
 }));
 const { PORT = 3000 } = process.env;
