@@ -7,12 +7,24 @@ const cookieParser = require('cookie-parser');
 const router = require('./routes/index');
 const errorHandler = require('./middlwares/error');
 const { requestLogger, errorLogger } = require('./middlwares/logger');
-const corsError = require('./middlwares/cors');
+// const corsError = require('./middlwares/cors');
 // константы
 const app = express();
-app.use('*', cors(corsError));
 app.use(express.json());
-// app.use(cors());
+// app.use(cors(corsError));
+app.use(cors({
+  credentials: true,
+  origin: ['http://localhost:3001',
+    'https://work.tema.nomoredomains.work',
+    'http://work.tema.nomoredomains.work',
+    'https://api.work.tema.nomoredomains.work',
+    'http://api.work.tema.nomoredomains.work',
+    'https://localhost:3001',
+    'http://localhost:3001',
+    'https://localhost:3000',
+    'http://localhost:3000',
+  ],
+}));
 const { PORT = 3000 } = process.env;
 // // подключаемся к серверу mongo
 mongoose.connect('mongodb://127.0.0.1:27017/mestodb', {
