@@ -9,8 +9,7 @@
 
 ## Ссылки на проект
 
-<!-- IP-адрес 158.160.58.211 -->
-IP 158.160.58.211
+IP 158.160.101.192
 
 Frontend https://work.tema.nomoredomains.work
 
