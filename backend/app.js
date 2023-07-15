@@ -15,8 +15,15 @@ app.use(express.json());
 app.use(cors({
   credentials: true,
   origin: [
+    // 'http://localhost:3001',
     'https://work.tema.nomoredomains.work',
-    // 'http://work.tema.nomoredomains.work',
+    'http://work.tema.nomoredomains.work',
+    // 'https://api.work.tema.nomoredomains.work',
+    // 'http://api.work.tema.nomoredomains.work',
+    'https://localhost:3001',
+    'http://localhost:3001',
+    // 'https://localhost:3000',
+    // 'http://localhost:3000',
   ],
 }));
 const { PORT = 3000 } = process.env;

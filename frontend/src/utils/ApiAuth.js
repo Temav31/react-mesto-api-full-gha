@@ -49,8 +49,8 @@ class ApiAuth {
 	}
 }
 // класс апи 
-const auth = new ApiAuth('https://api.work.tema.nomoredomains.work');
-// const auth = new ApiAuth('http://localhost:3000');
+// const auth = new ApiAuth('https://api.work.tema.nomoredomains.work');
+const auth = new ApiAuth('http://localhost:3000');
 // const auth = new ApiAuth('https://auth.nomoreparties.co');
 // экспортирем класс
 export default auth;

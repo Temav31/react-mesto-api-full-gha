@@ -9,7 +9,7 @@ module.exports.options = {
   // 'https://localhost:3000',
   // 'http://localhost:3000',
   // ],
-  // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS', // настраивает заголовок CORS Access-Control-Allow-Methods.
+  // methods: 'GET,HEAD,PUT,PATCH,POST,DELETE,OPTIONS',
   // preflightContinue: false, // передать предварительный ответ CORS следующему обработчику.
   // optionsSuccessStatus: 204, // Предоставляет код состояния для успешных OPTIONSзапросов.
   // allowedHeaders: ['Content-Type', 'Origin', 'Referer', 'Accept', 'Authorization'],
