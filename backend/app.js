@@ -14,7 +14,7 @@ app.use(express.json());
 // app.use(cors(corsError));
 app.use(cors({
   credentials: true,
-  origin: ['http://localhost:3001',
+  origin: [
     'https://work.tema.nomoredomains.work',
     'http://work.tema.nomoredomains.work',
     'https://api.work.tema.nomoredomains.work',
