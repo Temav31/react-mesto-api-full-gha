@@ -5,12 +5,14 @@
   
 Пожалуйста, прикрепите в это описание ссылку на сайт, размещенный на Яндекс.Облаке.
 
-Адрес репозитория: https://github.com/...
+Адрес репозитория: https://github.com/Temav31/react-mesto-api-full-gha.git
 
 ## Ссылки на проект
 
 IP 158.160.101.192
 
+
 Frontend https://work.tema.nomoredomains.work
+
 
 Backend https://api.work.tema.nomoredomains.work
